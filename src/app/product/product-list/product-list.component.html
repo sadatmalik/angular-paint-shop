@@ -6,6 +6,13 @@
     <input matInput (keyup)="applyFilter($event)" type="text" placeholder="Search">
   </mat-form-field>
 
+  <mat-form-field class="sort-dropdown">
+    <mat-select (selectionChange)="sortProducts($event.value)">
+      <mat-option value="priceLowHigh">Price Low to High</mat-option>
+      <mat-option value="priceHighLow">Price High to Low</mat-option>
+    </mat-select>
+  </mat-form-field>
+
   <div fxLayout="row wrap" fxLayoutGap="50px grid">
     <div *ngFor="let product of filtered">
       <mat-card class="product-card" (click)="addToCart(product)">

@@ -1,3 +1,9 @@
 <div *ngFor="let product of products">
-  <h2>{{ product.name }}</h2>
+  <mat-card class="product-card">
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <mat-card-title>{{ product.name }}u</mat-card-title>
+      <mat-card-subtitle>{{ product.price }}</mat-card-subtitle>
+    </mat-card-content>
+  </mat-card>
 </div>
